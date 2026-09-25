@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Find trusted local businesses and everyday services in Tongaat." />
+  <title>Mzansi Spots | Tongaat</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Mzansi Spots home">
+      <span class="brand-mark">M</span>
+      <span><strong>Mzansi</strong> Spots<small>Tongaat</small></span>
+    </a>
+    <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="mainNav">Menu</button>
+    <nav id="mainNav" class="main-nav" aria-label="Main navigation">
+      <a href="#discover">Discover</a>
+      <a href="#categories">Categories</a>
+      <a href="#owners">For business owners</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <p class="eyebrow">LOCAL • TRUSTED • NEARBY</p>
+        <h1 id="heroTitle">Find your next favourite spot in Tongaat.</h1>
+        <p class="hero-text">Discover real local businesses, services and specials around you.</p>
+        <form class="search-bar" id="searchForm">
+          <label class="sr-only" for="searchInput">Search businesses</label>
+          <input id="searchInput" type="search" placeholder="Search food, beauty, repairs..." />
+          <button type="submit">Search</button>
+        </form>
+        <div class="quick-links" aria-label="Popular searches">
+          <button data-query="restaurants">Restaurants</button>
+          <button data-query="beauty">Beauty</button>
+          <button data-query="car wash">Car wash</button>
+          <button data-query="repairs">Repairs</button>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="Featured local special">
+        <span class="offer-badge">TODAY'S SPECIAL</span>
+        <div class="plate">🍗</div>
+        <h2>Mama's Kitchen</h2>
+        <p>Chicken + chips — <strong>R60</strong></p>
+        <span class="distance">2.4 km away</span>
+      </div>
+    </section>
+
+    <section class="section" id="categories" aria-labelledby="categoriesTitle">
+      <div class="section-heading"><div><p class="eyebrow">EXPLORE TONGAAT</p><h2 id="categoriesTitle">What are you looking for?</h2></div></div>
+      <div class="category-grid">
+        <button class="category" data-query="food"><span>🍽️</span><strong>Food &amp; drink</strong><small>23 spots</small></button>
+        <button class="category" data-query="beauty"><span>💇🏽</span><strong>Beauty &amp; wellness</strong><small>18 spots</small></button>
+        <button class="category" data-query="services"><span>🛠️</span><strong>Everyday services</strong><small>31 spots</small></button>
+        <button class="category" data-query="shopping"><span>🛍️</span><strong>Shopping</strong><small>14 spots</small></button>
+      </div>
+    </section>
+
+    <section class="section tinted" id="discover" aria-labelledby="discoverTitle">
+      <div class="section-heading"><div><p class="eyebrow">DISCOVER NEARBY</p><h2 id="discoverTitle">Popular in Tongaat</h2></div><button class="text-button" id="showAll">View all spots →</button></div>
+      <div class="spot-grid" id="spotGrid"></div>
+      <p class="empty-state" id="emptyState" hidden>No spots found. Try another search.</p>
+    </section>
+
+    <section class="owner-banner" id="owners">
+      <div><p class="eyebrow">OWN A LOCAL BUSINESS?</p><h2>Be found by people nearby.</h2><p>Claim your spot, keep your hours updated and share today's special.</p></div>
+      <button class="primary-button" id="listBusiness">List my business</button>
+    </section>
+  </main>
+
+  <footer><span>© 2026 Mzansi Spots</span><span>Made for local communities in South Africa</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
